@@ -1,1 +1,1 @@
-<h1>RPG Chrome Extension</h1>
+<h1 align="center">RPG Chrome Extension</h1>
