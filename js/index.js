@@ -39,10 +39,11 @@ form.addEventListener("submit", function(event) {
     
     let lingua = document.getElementById("lingua").value;
     let conteudoTraduzidoJS = [];
-    let conteudoTraduzir = document.getElementById("conteudo-traduzir").value.toUpperCase();
+    let conteudoTraduzir = document.getElementById("conteudo-traduzir").value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let conteudoTraduzidoHTML = document.getElementById("conteudo-traduzido");
 
     if (lingua == "LinguaRPG") {
+        conteudoTraduzir = conteudoTraduzir.toUpperCase();
         for (let index = 0; index < conteudoTraduzir.length; index++) {
             if (conteudoTraduzir[index] in alfabeto) {
                 conteudoTraduzidoJS.push(alfabeto[conteudoTraduzir[index]]);
@@ -52,14 +53,18 @@ form.addEventListener("submit", function(event) {
         conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
     }
     else{
-        let conteudoTraduzirSeparado = conteudoTraduzir.split(/(?=[A-Z])|[^A-Za-z ]/);
+        console.log(conteudoTraduzir);
+
+        conteudoTraduzir = conteudoTraduzir.split(/([A-Z\s.,!?]+)/);
+
+        console.log(conteudoTraduzir);
         
-        for (let index = 0; index < conteudoTraduzirSeparado.length; index++) {
-            if(alfabeto.hasOwnProperty(conteudoTraduzirSeparado[index])){
-                conteudoTraduzidoJS.push(Object.keys(alfabeto)[index]);
+        for (let index = 0; index < conteudoTraduzir.length; index++) {
+            if(alfabeto.hasOwnProperty(conteudoTraduzir[index])){
+                conteudoTraduzidoJS.push(conteudoTraduzir[index]);
             }
             
-            console.log(conteudoTraduzirSeparado);
+            console.log(conteudoTraduzir);
         }
 
         conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
