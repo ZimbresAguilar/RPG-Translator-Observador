@@ -39,26 +39,29 @@ form.addEventListener("submit", function(event) {
     
     let lingua = document.getElementById("lingua").value;
     let conteudoTraduzidoJS = [];
-    let conteudoTraduzir = document.getElementById("conteudo-traduzir").value;
+    let conteudoTraduzir = document.getElementById("conteudo-traduzir").value.toUpperCase();
     let conteudoTraduzidoHTML = document.getElementById("conteudo-traduzido");
 
     if (lingua == "LinguaRPG") {
         for (let index = 0; index < conteudoTraduzir.length; index++) {
-            
-            for(let jIndex in alfabeto){
-                if(conteudoTraduzir[index] == Object.keys(alfabeto)[jIndex]){
-                    conteudoTraduzidoJS.push(alfabeto[jIndex]);
-                }
-
-                console.log(Object.keys(alfabeto)[jIndex]);
-                console.log(conteudoTraduzir);
-                console.log(conteudoTraduzidoJS);
+            if (conteudoTraduzir[index] in alfabeto) {
+                conteudoTraduzidoJS.push(alfabeto[conteudoTraduzir[index]]);
             }
         }
 
         conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
-
-        console.log(conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join(""));
     }
+    else{
+        let conteudoTraduzirSeparado = conteudoTraduzir.split(/(?=[A-Z])|[^A-Za-z ]/);
+        
+        for (let index = 0; index < conteudoTraduzirSeparado.length; index++) {
+            if(alfabeto.hasOwnProperty(conteudoTraduzirSeparado[index])){
+                conteudoTraduzidoJS.push(Object.keys(alfabeto)[index]);
+            }
+            
+            console.log(conteudoTraduzirSeparado);
+        }
 
+        conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
+    }
 });
