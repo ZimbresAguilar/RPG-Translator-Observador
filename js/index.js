@@ -55,7 +55,9 @@ form.addEventListener("submit", function(event) {
     else{
         console.log(conteudoTraduzir);
 
-        conteudoTraduzir = conteudoTraduzir.split(/([A-Z\s.,!?]+)/);
+        conteudoTraduzir = conteudoTraduzir.trim();
+        conteudoTraduzir = conteudoTraduzir.split(/([A-Z\s.,!?])/);
+        conteudoTraduzir = conteudoTraduzir.filter(part => part !== "");
 
         console.log(conteudoTraduzir);
         
