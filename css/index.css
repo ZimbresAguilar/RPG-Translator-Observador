@@ -1,0 +1,65 @@
+*{margin: 0; padding: 0}
+
+main{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle, #a1c5e5, #8bbae6, #75aee7, #5ea2e8, #4696e8, #3987dc, #2c78d0, #2069c4, #1f54aa, #1c4091, #172d78, #101b60);
+}
+
+article{
+    min-height: 550px;
+    height: 70%;
+    min-width: 400px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: rgb(28, 28, 28);;
+}
+
+form{
+    height: 95%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+fieldset{
+    border: none;
+}
+
+#lingua{
+    width: 340px;
+}
+.lingua, .conteudo-traduzir, .conteudo-traduzido{
+    display: flex;
+    flex-direction: column;
+}
+.lingua label, .conteudo-traduzir label, .conteudo-traduzido label{
+    padding-bottom: 5px;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    border-radius: .5em;
+}
+
+/*-----===FOOTER===-----*/
+footer{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
+    color: white;
+}

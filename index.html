@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Tradutor</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <form action="" id="form-tradutor-rpg">
+                <div class="form-title">
+                    <h1>TRADUTOR RPG</h1>
+                </div>
+
+                <fieldset class="lingua">
+                    <label for="lingua">Língua</label>
+                    <select name="lingua" id="lingua" required>
+                        <option value=""></option>
+                        <option value="Portugues">Língua RPG -> Português</option>
+                        <option value="LinguaRPG">Português -> Língua RPG</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="conteudo-traduzir">
+                    <label for="conteudo-traduzir">Conteúdo</label>
+                    <textarea name="conteudo-traduzir" id="conteudo-traduzir" cols="40" rows="10" required></textarea>
+                </fieldset>
+
+                <fieldset class="traduzir">
+                    <input type="submit" id="traduzir" value="TRADUZIR">
+                </fieldset>
+
+                <fieldset class="conteudo-traduzido">
+                    <label for="conteudo-traduzido">Tradução</label>
+                    <textarea name="conteudo-traduzido" id="conteudo-traduzido" cols="40" rows="10" readonly></textarea>
+                </fieldset>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        LoriaLawrenceZ & GPaiva889
+    </footer>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>
