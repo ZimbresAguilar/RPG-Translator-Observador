@@ -1,31 +1,31 @@
 /*-----===VARIABLES===-----*/
 const alfabeto = {
-    "A": "aaa",
-    "B": "bbb",
-    "C": "ccc",
-    "D": "ddd",
-    "E": "eee",
-    "F": "fff",
-    "G": "ggg",
-    "H": "hhh",
-    "I": "iii",
-    "J": "jjj",
-    "K": "kkk",
-    "L": "lll",
-    "M": "mmm",
-    "N": "nnn",
-    "O": "ooo",
-    "P": "ppp",
-    "Q": "qqq",
-    "R": "rrr",
-    "S": "sss",
-    "T": "ttt",
-    "U": "uuu",
-    "V": "vvv",
-    "W": "www",
-    "X": "xxx",
-    "Y": "yyy",
-    "Z": "zzz",
+    "A": "An",
+    "B": "Bal",
+    "C": "Cor",
+    "D": "Dax",
+    "E": "Erz",
+    "F": "Fir",
+    "G": "Gol",
+    "H": "Hath",
+    "I": "Ish",
+    "J": "Jur",
+    "K": "Kag",
+    "L": "Liq",
+    "M": "Mul",
+    "N": "Nol",
+    "O": "Olk",
+    "P": "Paex",
+    "Q": "Qen",
+    "R": "Rak",
+    "S": "Sar",
+    "T": "Tor",
+    "U": "Um",
+    "V": "Vat",
+    "W": "Wos",
+    "X": "Xo",
+    "Y": "Yil",
+    "Z": "Zet",
     " ": " ",
     ".": ".",
     ",": ",",
@@ -40,24 +40,25 @@ form.addEventListener("submit", function(event) {
     let lingua = document.getElementById("lingua").value;
     let conteudoTraduzidoJS = [];
     let conteudoTraduzir = document.getElementById("conteudo-traduzir").value;
-    let conteudoTraduzido = document.getElementById("conteudo-traduzido");
+    let conteudoTraduzidoHTML = document.getElementById("conteudo-traduzido");
 
     if (lingua == "LinguaRPG") {
         for (let index = 0; index < conteudoTraduzir.length; index++) {
             
             for(let jIndex in alfabeto){
-                if(conteudoTraduzir[index] == alfabeto[jIndex]){
+                if(conteudoTraduzir[index] == Object.keys(alfabeto)[jIndex]){
                     conteudoTraduzidoJS.push(alfabeto[jIndex]);
                 }
 
+                console.log(Object.keys(alfabeto)[jIndex]);
                 console.log(conteudoTraduzir);
                 console.log(conteudoTraduzidoJS);
             }
         }
 
-        conteudoTraduzido.value = conteudoTraduzidoJS.join("");
+        conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
 
-        console.log(conteudoTraduzido.value = conteudoTraduzidoJS.join(""));
+        console.log(conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join(""));
     }
 
 });
