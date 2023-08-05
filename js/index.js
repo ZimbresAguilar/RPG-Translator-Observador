@@ -33,8 +33,10 @@ const alfabeto = {
     "?": "?",
 }
 const form = document.getElementById("form-tradutor-rpg");
+const traduzir = document.getElementById("traduzir");
+const inverter = document.getElementById("inverter");
 
-form.addEventListener("submit", function(event) {
+traduzir.addEventListener("click", function(event) {
     event.preventDefault();
     
     let lingua = document.getElementById("lingua").value;
@@ -71,4 +73,24 @@ form.addEventListener("submit", function(event) {
 
         conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
     }
+});
+
+inverter.addEventListener("click", function(event){
+    event.preventDefault();
+    
+    let lingua = document.getElementById("lingua");
+    let conteudoTraduzir = document.getElementById("conteudo-traduzir");
+    let conteudoTraduzido = document.getElementById("conteudo-traduzido");
+    
+    let armazenarTemporariamente = conteudoTraduzir.value;
+
+    if (lingua.value == "LinguaRPG") {
+        lingua.value = "Portugues";
+    }
+    else{
+        lingua.value = "LinguaRPG";
+    }
+
+    conteudoTraduzir.value = conteudoTraduzido.value;
+    conteudoTraduzido.value = armazenarTemporariamente;
 });
