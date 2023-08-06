@@ -31,6 +31,14 @@ const alfabeto = {
     ",": ",",
     "!": "!",
     "?": "?",
+    "(": "(",
+    ")": ")",
+    ";": ";",
+    "\"": "\"",
+    "'": "'",
+    "/": "/",
+    "\\": "\\",
+    "\:": "\:"
 }
 const form = document.getElementById("form-tradutor-rpg");
 const traduzir = document.getElementById("traduzir");
