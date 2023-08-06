@@ -126,7 +126,7 @@ footer{
         min-width: 0;
         width: 100%;
         border-radius: 0;
-        background-image: url("../img/observador.jpg");
+        background-image: url("../assets/bg_cel.png");
         background-size: cover; 
     }
 }
