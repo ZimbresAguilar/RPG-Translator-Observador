@@ -42,6 +42,7 @@ article{
     background-color: rgb(28, 28, 28);
     overflow: hidden;
     background-size: cover;
+    box-shadow: 0 0 2em .5em rgb(28, 28, 28);
 }
 
 form{
@@ -50,7 +51,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     color: white;
     opacity: 0.6;
     font-family: 'Kanit', sans-serif;
@@ -72,10 +73,6 @@ fieldset{
     border: solid 2px white;
     border-radius: .5em;
     color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .lingua, .conteudo-traduzir, .conteudo-traduzido{
     display: flex;
