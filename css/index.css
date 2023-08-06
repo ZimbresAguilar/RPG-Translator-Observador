@@ -132,7 +132,7 @@ footer{
 }
 
 /*-----===EFECTS===-----*/
-#traduzir:hover, #inverter:hover{
+#traduzir:hover, #inverter:hover, #copiar:hover{
     background-color: white;
     color: rgb(28, 28, 28);
 }
