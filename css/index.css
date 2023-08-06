@@ -6,7 +6,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/img/Observador_2.png");
+    background-image: url("../img/Observador_2.png");
     background-size: cover;
 }
 
@@ -20,7 +20,7 @@ article{
     justify-content: center;
     border-radius: 1em;
     overflow: hidden;
-    background-image: url("/img/Observador_1.png");
+    background-image: url("../img/Observador_1.png");
     background-size: cover;
 }
 
@@ -74,7 +74,7 @@ footer{
         min-width: 0;
         width: 100%;
         border-radius: 0;
-        background-image: url("/img/observador.jpg");
+        background-image: url("../img/observador.jpg");
         background-size: cover; 
     }
 }
