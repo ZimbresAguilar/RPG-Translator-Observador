@@ -31,10 +31,19 @@ const alfabeto = {
     ",": ",",
     "!": "!",
     "?": "?",
+    "(": "(",
+    ")": ")",
+    ";": ";",
+    "\"": "\"",
+    "'": "'",
+    "/": "/",
+    "\\": "\\",
+    "\:": "\:"
 }
 const form = document.getElementById("form-tradutor-rpg");
 const traduzir = document.getElementById("traduzir");
 const inverter = document.getElementById("inverter");
+const copiar = document.getElementById("copiar");
 
 traduzir.addEventListener("click", function(event) {
     event.preventDefault();
@@ -93,4 +102,13 @@ inverter.addEventListener("click", function(event){
 
     conteudoTraduzir.value = conteudoTraduzido.value;
     conteudoTraduzido.value = armazenarTemporariamente;
+});
+
+copiar.addEventListener("click", function(event){
+    event.preventDefault();
+
+    let conteudoTraduzido = document.getElementById("conteudo-traduzido");
+
+    conteudoTraduzido.select();
+    document.execCommand('copy');
 });

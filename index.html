@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG - Tradutor</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -25,7 +30,7 @@
 
                 <fieldset class="conteudo-traduzir">
                     <label for="conteudo-traduzir">Conteúdo</label>
-                    <textarea name="conteudo-traduzir" id="conteudo-traduzir" cols="40" rows="10" required></textarea>
+                    <textarea name="conteudo-traduzir" id="conteudo-traduzir" required></textarea>
                 </fieldset>
 
                 <fieldset class="traduzir-inverter">
@@ -36,6 +41,10 @@
                 <fieldset class="conteudo-traduzido">
                     <label for="conteudo-traduzido">Tradução</label>
                     <textarea name="conteudo-traduzido" id="conteudo-traduzido" cols="40" rows="10" readonly></textarea>
+                </fieldset>
+
+                <fieldset class="copiar">
+                    <input type="submit" id="copiar" value="COPIAR">
                 </fieldset>
             </form>
         </article>
