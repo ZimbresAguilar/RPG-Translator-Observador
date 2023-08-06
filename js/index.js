@@ -38,7 +38,8 @@ const alfabeto = {
     "'": "'",
     "/": "/",
     "\\": "\\",
-    "\:": "\:"
+    "\:": "\:",
+    "\n": "\n"
 }
 const form = document.getElementById("form-tradutor-rpg");
 const traduzir = document.getElementById("traduzir");
@@ -56,11 +57,13 @@ traduzir.addEventListener("click", function(event) {
     if (lingua == "LinguaRPG") {
         conteudoTraduzir = conteudoTraduzir.toUpperCase();
         for (let index = 0; index < conteudoTraduzir.length; index++) {
+            console.log(conteudoTraduzir[index])
             if (conteudoTraduzir[index] in alfabeto) {
                 conteudoTraduzidoJS.push(alfabeto[conteudoTraduzir[index]]);
+            } else {
+                conteudoTraduzidoJS.push(conteudoTraduzir[index]);
             }
         }
-
         conteudoTraduzidoHTML.value = conteudoTraduzidoJS.join("");
     }
     else{
