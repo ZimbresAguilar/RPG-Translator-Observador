@@ -6,7 +6,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: radial-gradient(circle, #a1c5e5, #8bbae6, #75aee7, #5ea2e8, #4696e8, #3987dc, #2c78d0, #2069c4, #1f54aa, #1c4091, #172d78, #101b60);
+    background-image: url("/img/Observador_2.png");
+    background-size: cover;
 }
 
 article{
@@ -19,7 +20,8 @@ article{
     justify-content: center;
     border-radius: 1em;
     overflow: hidden;
-    background-color: rgb(28, 28, 28);
+    background-image: url("/img/Observador_1.png");
+    background-size: cover;
 }
 
 form{
@@ -30,6 +32,7 @@ form{
     align-items: center;
     justify-content: space-evenly;
     color: white;
+    opacity: 0.6;
 }
 
 fieldset{
@@ -71,6 +74,7 @@ footer{
         min-width: 0;
         width: 100%;
         border-radius: 0;
-        background-image: linear-gradient(rgb(28, 28, 28) 80%, rgb(18, 21, 54) 100%); 
+        background-image: url("/img/observador.jpg");
+        background-size: cover; 
     }
 }
