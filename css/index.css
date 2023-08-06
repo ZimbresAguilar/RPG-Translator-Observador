@@ -40,9 +40,9 @@ article{
     align-items: center;
     justify-content: center;
     background-color: rgb(28, 28, 28);
-    overflow: hidden;
-    background-size: cover;
     box-shadow: 0 0 2em .5em rgb(28, 28, 28);
+    border-radius: 1em;
+    overflow: hidden;
 }
 
 form{
