@@ -1,17 +1,23 @@
-*{margin: 0; padding: 0}
+* {
+    margin: 0;
+    padding: 0
+}
 
 @keyframes bounce-background {
     from {
         background-position: top;
     }
+
     50% {
         background-position: bottom;
     }
+
     to {
         background-position: top;
     }
 }
-main{
+
+main {
     min-height: 650px;
     height: 90vh;
     width: 100%;
@@ -27,12 +33,12 @@ main{
     animation-iteration-count: infinite;
     /* For Chrome & Safari */
     -webkit-animation-name: bounce-background;
-    -webkit-animation-timing-function:ease-in-out;
-    -webkit-animation-duration:9s;
-    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-iteration-count: infinite;
 }
 
-article{
+article {
     min-height: 550px;
     height: 70%;
     min-width: 400px;
@@ -46,7 +52,7 @@ article{
     overflow: hidden;
 }
 
-form{
+form {
     height: 95%;
     width: 90%;
     display: flex;
@@ -58,15 +64,15 @@ form{
     font-family: 'Kanit', sans-serif;
 }
 
-.form-title h1{
+.form-title h1 {
     color: white;
 }
 
-fieldset{
+fieldset {
     border: none;
 }
 
-#lingua{
+#lingua {
     width: 340px;
     padding: 5px;
     background-color: rgb(28, 28, 28);
@@ -75,19 +81,27 @@ fieldset{
     border-radius: .5em;
     color: white;
 }
-.lingua, .conteudo-traduzir, .conteudo-traduzido{
+
+.lingua,
+.conteudo-traduzir,
+.conteudo-traduzido {
     display: flex;
     flex-direction: column;
 }
-.lingua label, .conteudo-traduzir label, .conteudo-traduzido label{
+
+.lingua label,
+.conteudo-traduzir label,
+.conteudo-traduzido label {
     padding-bottom: 5px;
 }
 
-.conteudo-traduzir, .conteudo-traduzido{
+.conteudo-traduzir,
+.conteudo-traduzido {
     min-width: 350px;
     width: 90%;
 }
-textarea{
+
+textarea {
     height: 100px;
     padding: 7px;
     color: white;
@@ -98,7 +112,9 @@ textarea{
     background-color: rgb(28, 28, 28);
 }
 
-#traduzir, #inverter, #copiar{
+#traduzir,
+#inverter,
+#copiar {
     margin: 0 10px;
     padding: 5px 10px;
     color: white;
@@ -110,8 +126,8 @@ textarea{
 }
 
 /*-----===FOOTER===-----*/
-footer{
-    min-height: 100px;
+footer {
+    min-height: 60px;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -122,47 +138,53 @@ footer{
 }
 
 @media screen and (max-width: 550px) {
-    article{
+    article {
         min-height: 0;
         height: 100%;
         min-width: 0;
         width: 100%;
         border-radius: 0;
         background-image: url("../assets/bg_cel.png");
-        background-size: cover; 
+        background-size: cover;
     }
 
-    form{
+    form {
         width: 100%;
     }
 
-    .form-title{
+    .form-title {
         height: 10%;
         display: flex;
         align-items: center;
     }
-    .lingua{
+
+    .lingua {
         height: 15%;
     }
-    .traduzir-inverter, .copiar{
+
+    .traduzir-inverter,
+    .copiar {
         height: 7.5%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .conteudo-traduzir, .conteudo-traduzido{
+    .conteudo-traduzir,
+    .conteudo-traduzido {
         height: 30%;
         min-width: 0;
         width: 100%;
         align-items: end;
     }
-    .conteudo-traduzir label, .conteudo-traduzido label{
+
+    .conteudo-traduzir label,
+    .conteudo-traduzido label {
         height: 15%;
         width: 95%;
     }
-    
-    textarea{
+
+    textarea {
         padding: 7px 0 7px 7px;
         height: 70%;
         width: 100%;
@@ -172,10 +194,35 @@ footer{
         border-radius: 0;
         background-color: transparent;
     }
+
+    /*-----===SCROLLBAR===-----*/
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: goldenrod;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgb(28, 28, 28);
+    }
+
+    ::-moz-scrollbar {
+        width: 10px;
+    }
+
+    ::-moz-scrollbar-thumb {
+        background-color: rgb(28, 28, 28);
+        border-radius: 5px;
+    }
 }
 
 /*-----===EFECTS===-----*/
-#traduzir:hover, #inverter:hover, #copiar:hover{
+#traduzir:hover,
+#inverter:hover,
+#copiar:hover {
     background-color: white;
     color: rgb(28, 28, 28);
 }
@@ -183,22 +230,22 @@ footer{
 /*-----===SCROLLBAR===-----*/
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
 ::-webkit-scrollbar-thumb {
     background-color: goldenrod;
     border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: rgb(28, 28, 28);
-  }
+}
 
-  ::-moz-scrollbar {
+::-webkit-scrollbar-track {
+    background-color: rgb(28, 28, 28);
+}
+
+::-moz-scrollbar {
     width: 10px;
-  }
-  
-  ::-moz-scrollbar-thumb {
+}
+
+::-moz-scrollbar-thumb {
     background-color: rgb(28, 28, 28);
     border-radius: 5px;
-  }
+}
