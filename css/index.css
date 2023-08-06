@@ -97,7 +97,7 @@ textarea{
     background-color: rgb(28, 28, 28);
 }
 
-#traduzir, #inverter{
+#traduzir, #inverter, #copiar{
     margin: 0 10px;
     padding: 5px 10px;
     color: white;
