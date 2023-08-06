@@ -12,6 +12,7 @@
     }
 }
 main{
+    min-height: 650px;
     height: 90vh;
     width: 100%;
     display: flex;
@@ -110,6 +111,7 @@ textarea{
 
 /*-----===FOOTER===-----*/
 footer{
+    min-height: 100px;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -128,6 +130,46 @@ footer{
         border-radius: 0;
         background-image: url("../assets/bg_cel.png");
         background-size: cover; 
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .form-title{
+        height: 10%;
+        display: flex;
+        align-items: center;
+    }
+    .lingua{
+        height: 15%;
+    }
+    .traduzir-inverter, .copiar{
+        height: 7.5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-traduzir, .conteudo-traduzido{
+        height: 30%;
+        min-width: 0;
+        width: 100%;
+        align-items: end;
+    }
+    .conteudo-traduzir label, .conteudo-traduzido label{
+        height: 15%;
+        width: 95%;
+    }
+    
+    textarea{
+        height: 70%;
+        width: 100%;
+        border: none;
+        border-top: solid 1px darkgray;
+        border-bottom: solid 1px darkgray;
+        border-radius: 0;
+        background-color: transparent;
     }
 }
 
