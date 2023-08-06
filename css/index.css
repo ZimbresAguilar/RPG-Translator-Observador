@@ -163,6 +163,7 @@ footer{
     }
     
     textarea{
+        padding: 0 0 0 7px;
         height: 70%;
         width: 100%;
         border: none;
