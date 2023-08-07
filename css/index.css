@@ -137,6 +137,12 @@ footer {
     color: white;
 }
 
+footer a{
+    text-style: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
 @media screen and (max-width: 550px) {
     article {
         min-height: 0;
